@@ -30,7 +30,7 @@ export default class PageController {
     @HttpCode(201)
     createPage(
         @Body() body: Page
-    ): Page {
+        ): Page {
         console.log(`Incoming POST body param:`, body)
         return body
     }
