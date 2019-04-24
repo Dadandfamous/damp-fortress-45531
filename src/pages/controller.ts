@@ -16,4 +16,13 @@ export default class PageController {
     allPages(): PageList {
         return { pages: Object.values(pagesById) }
     }
+
+    @Put('/pages/:id')
+updatePage(
+    @Param('id') id: number,
+    @Body() body: Partial<Page>
+): Page {
+    console.log(`Incoming PUT body param:`, body)
+    return pagesById[id]
+}
 }
