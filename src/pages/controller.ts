@@ -1,4 +1,4 @@
-import { JsonController, Get, Param } from 'routing-controllers'
+import { JsonController, Get, Put, Body, Param } from 'routing-controllers'
 import pagesById, { Page } from './data'
 type PageList = { pages: Page[] }
 
@@ -18,10 +18,10 @@ export default class PageController {
     }
 
     @Put('/pages/:id')
-updatePage(
+    updatePage(
     @Param('id') id: number,
     @Body() body: Partial<Page>
-): Page {
+    ): Page {
     console.log(`Incoming PUT body param:`, body)
     return pagesById[id]
 }
