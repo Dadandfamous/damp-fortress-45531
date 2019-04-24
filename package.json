@@ -2,7 +2,7 @@
   "name": "dinsdagochtend",
   "version": "1.0.0",
   "description": "",
-  "main": "target/index.ts",
+  "main": "target/index.js",
   "scripts": {
     "start": "node .",
     "postinstall": "tsc -p ."
