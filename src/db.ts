@@ -26,9 +26,12 @@ export default () =>
   createConnection({
       type: "postgres",
       url: process.env.DATABASE_URL || 'postgres://postgres:secret@localhost:5432/postgres',
-      entities: [],
+      entities: [
+      ],
       synchronize: true,
       logging: true,
       namingStrategy: new CustomNamingStrategy()
   })
   .then(_ => console.log('Connected to Postgres with TypeORM'))
+
+  
